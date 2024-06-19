@@ -8,6 +8,7 @@ public class permutation_of_String
         String s=sc.next();
         permutation(s,ll,"");
         System.out.println(ll);
+        sc.close();
     }    
     public static void permutation(String s,ArrayList<String>ll, String ans)
         {   

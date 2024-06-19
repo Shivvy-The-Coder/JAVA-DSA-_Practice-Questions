@@ -1,6 +1,9 @@
 import java.util.*;
 public class Generate_valid_parenthesis1
 {
+    /**
+     * @param args
+     */
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
@@ -9,6 +12,7 @@ public class Generate_valid_parenthesis1
         int n=sc.nextInt();
          Generate_valid_parenthesis(n,0,0,ll,"") ;    
          System.out.println(ll);
+         sc.close();
     }
     public static  void Generate_valid_parenthesis(int n, int open,int close , List<String> ll,String ans)
         {
