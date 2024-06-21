@@ -3,9 +3,9 @@ class subsequence_Of_String
     public static void main (String args[])
         {
             String s ="abc";
-            subsequence(s,"");
+            System.out.println("\n"+subsequence(s,""));
         }
-    public static void subsequence(String s,String ans)
+    public static int subsequence(String s,String ans)
         {
             if(s.length()==0)
                 {
@@ -13,12 +13,13 @@ class subsequence_Of_String
                         System.out.print("_ ");
                     else
                         System.out.print(ans+" ");
-                    return;
+                    return 1;
                 }
 
             char ch=s.charAt(0);
             String str=s.substring(1);
-            subsequence(str,ans);
-            subsequence(str,ans+ch);
+            int x=subsequence(str,ans);
+            int y=subsequence(str,ans+ch);
+                return x+y;
         }
 }
