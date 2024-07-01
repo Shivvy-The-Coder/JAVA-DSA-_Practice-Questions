@@ -10,7 +10,7 @@ class Grumpy_bookstore_owner {
         {
             int ei=0,si=0,sum=0,k=0,max=Integer.MIN_VALUE;
             int n=customers.length;
-            int i=0,j=0;
+            int i=0;
             
             while(ei<n)
                 {

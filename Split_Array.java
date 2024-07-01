@@ -1,11 +1,10 @@
-import java.util.*;
 public class Split_Array{
     public static void main(String args[]) 
     {
         // Your Code Here
-        Scanner sc = new Scanner(System.in);
-        int n=sc.nextInt();
+        
         int arr[]= {1,2,3,3,4,5};
+        int n=arr.length;
         int sum=0;
         for(int i=0;i<n;i++)
             {

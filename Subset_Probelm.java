@@ -1,9 +1,7 @@
-import java.util.*;
 public class Subset_Probelm {
     public static void main(String args[]) 
     {
         // Your Code Here
-        Scanner sc = new Scanner (System.in);
         int n=5;
         int arr[]={1,3,2,3,4};
         String s="";
