@@ -1,11 +1,11 @@
 public class mergeSort {
 
     public static void main(String[] args) {
-        int arr[]={5,7,2,4,1};
+        int arr[]={5,7,2,9,11,6,2,11,3};
         int ei=arr.length-1;
         int ans[]=sort(arr,0,ei);
         for (int i=0;i<=ei;i++)
-            System.out.print(ans[i]);
+            System.out.print(ans[i]+" ");
     }
     public static int [] sort (int []arr , int si , int ei)
         {
