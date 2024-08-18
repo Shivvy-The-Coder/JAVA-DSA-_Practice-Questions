@@ -2,7 +2,7 @@
  * static_keyword
  */
 public class static_keyword {
-
+    
     String name="Shivam";
     int age=19;
     public void answer()
@@ -10,6 +10,7 @@ public class static_keyword {
         System.out.println("My name is "+name +" and age is "+age);
     }
 }
+
 class Main
 {
     public static void main(String[] args) 
