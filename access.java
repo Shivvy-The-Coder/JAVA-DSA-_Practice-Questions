@@ -31,14 +31,26 @@
     {
         return this.name; 
     }
+
+    public void setage(int age)throws Exception
+    {
+        if(age <0)
+            throw new Exception("Age cannot be defined negative ") ;
+            // this is how we will throw exception if user inputs a negativ value
+        else 
+            this.age =age;
+    }
  }
 
 
 class main
  {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         access  obj = new access();
         obj.setname("Abhishek");
-        System.out.println(obj.display());        
+        obj.setage(9);
+        System.out.println(obj.display());  
+        //this is how encapsulation works in java
+           
     }
  }
