@@ -74,4 +74,4 @@ class using_Stack
         System.out.println(obj.peek());
         obj.Display();        
     }
-}
+} 
