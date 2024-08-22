@@ -13,6 +13,19 @@ public class Insert_in_Last {
         st.push(5);
         st.push(7);
 
-        System.out.println(st);  
+        System.out.println(st);
+        ans(st);
+        System.out.print(st);
     }
+     public static void ans(Stack <Integer> st)
+     {
+        if(st.isEmpty())
+            {
+                st.push(-7);
+                return;
+            }   
+        int a=st.pop();
+        ans(st);
+        st.push(a);
+     }
 }
