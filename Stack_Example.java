@@ -3,7 +3,7 @@
  */
 public class Stack_Example {
 
-    private int [] arr;
+    protected int [] arr;
     private int idx;
 
      Stack_Example()
