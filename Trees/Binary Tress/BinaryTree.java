@@ -1,34 +1,35 @@
-import java.util.*;
+import java.util.Scanner;
+
 class BinaryTree
 {
-
-    public class Node 
+    class Node
     {
         int val;
-        Node  left;
-        Node  right;        
+        Node left;
+        Node Right;
     }
     private Node root;
 
-    Scanner sc = new Scanner(System.in);
-
-    public void BinaryTreee()
+    public BinaryTree()
         {
-            root = CreateTree();
+            root=CreateTree();
         }
     public Node CreateTree()
         {
-            int item = sc.nextInt();
             Node nn = new Node();
-            nn.val=item;
+            Scanner sc = new Scanner(System.in);
+            int value=sc.nextInt();
+            nn.val=value;
 
-            Boolean hlc = sc.nextBoolean();
+            Boolean hlc= sc.nextBoolean();
             if(hlc)
                 nn.left=CreateTree();
-            Boolean hrc = sc.nextBoolean();
+            
+            Boolean hrc= sc.nextBoolean();
             if(hrc)
-                nn.right=CreateTree();
+                nn.Right=CreateTree();
 
-            return nn;
+            sc.close();
+            return null;
         }
 }
