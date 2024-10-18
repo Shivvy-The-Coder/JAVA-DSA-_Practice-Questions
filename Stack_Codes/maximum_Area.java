@@ -1,8 +1,6 @@
+package Stack_Codes;
 import java.util.Stack;
 
-/**
- * maximum_Area
- */
 public class maximum_Area {
 
     public static void main(String[] args) {

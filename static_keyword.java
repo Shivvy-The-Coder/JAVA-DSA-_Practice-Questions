@@ -1,6 +1,3 @@
-/**
- * static_keyword
- */
 public class static_keyword {
     
     String name="Shivam";

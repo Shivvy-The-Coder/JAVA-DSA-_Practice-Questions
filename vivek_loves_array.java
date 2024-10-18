@@ -17,6 +17,7 @@ public class vivek_loves_array {
                 split_array(ll,0);
                 System.out.println(max);
             }
+            sc.close();
     }
     public static void split_array(ArrayList<Integer> ll,int count)
         {   int sum1=0;

@@ -13,7 +13,7 @@ public static void main(String[] args) {
     System.out.println();
     Stack <Integer> st = new Stack<>();
     st.push(0);
-    int idx=0;
+    // int idx=0;
     int ans[]= new int[arr.length];
     for (int i=0;i<arr.length;i++)
         {

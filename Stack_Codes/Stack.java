@@ -1,8 +1,4 @@
 package Stack_Codes;
-
-/**
- * Stack
- */
 public class Stack 
 {
     private int value=0;
@@ -14,7 +10,7 @@ public class Stack
         arr=new int[5];
     }
     // defining size of Stack via user
-    public void Stack(int val)
+    public Stack(int val)
         {
             arr= new int[val];
         }

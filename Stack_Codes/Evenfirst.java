@@ -50,5 +50,6 @@ public class Evenfirst {
         }
         for(int i:ll)
             System.out.print(i+" ");
+            sc.close();
     }
 }

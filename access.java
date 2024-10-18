@@ -15,9 +15,10 @@
  public class access
  {
     private String name="Shivam";
+    @SuppressWarnings("unused")
     private int age =20;
     
-    public void  access(String name , int age) 
+    public   access(String name , int age) 
     {
         this.name = name;
         this.age =age;
@@ -43,14 +44,11 @@
  }
 
 
-class main
+class Main
  {
-    public static void main(String[] args)throws Exception {
-        access  obj = new access();
-        obj.setname("Abhishek");
-        obj.setage(9);
-        System.out.println(obj.display());  
-        //this is how encapsulation works in java
-           
+    public static void main (String[] args) throws Exception 
+    {
+        access  obj = new access("Abhishek",9);
+        System.out.println(obj.display());             
     }
  }

@@ -29,6 +29,7 @@ public class Rat_chase_new
             Print_path(arr,ansr,0,0);
             if(!flag)
                 System.out.println("NO PATH FOUND");
+                sc.close();
         }   
         public static void Print_path(char[][]arr , int [][]ansr ,int i, int j ) 
         {   

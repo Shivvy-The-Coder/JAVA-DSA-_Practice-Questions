@@ -1,5 +1,5 @@
 package Stack_Codes;
-import java.util.*;
+import java.util.Stack;
 class asteroids {
     public static void main(String[] args) {
         int [] Asteroids={5,10,-5};
@@ -9,7 +9,7 @@ class asteroids {
     {
      int n=asteroids.length;
     Stack <Integer> st = new Stack<>();
-     int []ans = new int[asteroids.length];
+    //  int []ans = new int[asteroids.length];
      for(int i=0;i<n;i++)
         {
             while(!st.isEmpty() && asteroids[i]*st.peek()<0)

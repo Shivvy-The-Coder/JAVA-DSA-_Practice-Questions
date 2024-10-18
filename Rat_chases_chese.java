@@ -20,7 +20,7 @@ public class Rat_chases_chese
                         print_path(maze, "", 0, 0,ansr);    
                         if(flag==false)
                             System.out.println("No path found"); 
-                        
+         sc.close();               
     }
     
     public static void print_path(char [][]maze , String ans, int i , int j,int ansr [][])

@@ -1,6 +1,3 @@
-/**
- * Stack
- */
 public class Stack_Example {
 
     protected int [] arr;
@@ -10,7 +7,7 @@ public class Stack_Example {
     {
         arr= new int[5];
     }
-    public void Stack_Example(int n)
+    public Stack_Example(int n)
     {
         arr= new int[n];  
     }
