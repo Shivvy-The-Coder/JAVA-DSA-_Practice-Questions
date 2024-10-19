@@ -1,14 +1,19 @@
+
 package Trees;
+import java.util.*;
 class client_Binary 
 {
     public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in); 
         BinaryTree obj =new BinaryTree();
         obj.Display();
         System.out.println("Maximum  value of the given Binary Tree is "+obj.max());
         System.out.println("Maximum  value of the given Binary Tree is "+obj.min());
-
-        if(obj.find(90))
-            System.out.println("yes available");
+        
+        System.out.println("Enter the value to search ");
+        int value = sc.nextInt();
+        if(obj.find(value))
+            System.out.println("yes, "+value+" available");
         else
             System.out.println("Not available");
     }
