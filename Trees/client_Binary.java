@@ -16,6 +16,13 @@ class client_Binary
             System.out.println("yes, "+value+" available");
         else
             System.out.println("Not available");
+
+        System.out.println("Height of Tree "+obj.height());
+
+        obj.preorder();
+        obj.inorder();
+        obj.postorder();
+        sc.close();
     }
 }
 // 10 true 20 true 40 false false true 50 false false true 30 false true 60 true 70 false false false

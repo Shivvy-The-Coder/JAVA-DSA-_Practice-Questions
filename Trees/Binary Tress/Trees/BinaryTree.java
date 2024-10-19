@@ -84,7 +84,7 @@ class BinaryTree
             return Math.min(nn.val,Math.min(lmin,rmin));
         }
 
-    // this will find andtell wether a perticlar value exists in  the Binary Tree or not
+    // this will find and tell wether a perticlar value exists in  the Binary Tree or not
 
     public boolean  find(int value)
         {
@@ -106,4 +106,68 @@ class BinaryTree
             return false;
         }
 
+    // this code will return the height od the binary tree
+
+    public int height()
+        {
+            return  height(this.root);
+
+        }
+    private int height(Node nn)
+        {   
+            if(nn==null)
+                return 0;
+            
+            int lheight = height(nn.left);
+            int rheight = height(nn.Right);
+
+            return Math.max(lheight,rheight)+1;
+        }
+
+    // Given Below code will print the preorder traversal of the Binary tree
+
+    public void preorder()
+        {
+            preorder(this.root);
+        }
+    private void preorder(Node nn)
+        {
+            if(nn==null)
+             return ;
+            
+            System.out.print(nn.val+" ");
+            preorder(nn.left);
+            preorder(nn.Right);
+        }
+
+    // Given below code will print the Inorder traversal of the binary Tree
+    public void inorder()
+    {
+        System.out.println();
+        inorder(this.root);
     }
+private void inorder(Node nn)
+    {
+        if(nn==null)
+         return ;
+        
+         inorder(nn.left);
+         System.out.print(nn.val+" ");
+         inorder(nn.Right);
+    }
+    // Given below code will print the Postorder traversal of the binary Tree
+    public void postorder()
+    {
+        System.out.println();
+        postorder(this.root);
+    }
+private void postorder(Node nn)
+    {
+        if(nn==null)
+         return ;
+        
+         postorder(nn.left);       
+         postorder(nn.Right);
+         System.out.print(nn.val+" ");
+    }
+}
