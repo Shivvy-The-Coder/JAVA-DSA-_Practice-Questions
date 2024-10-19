@@ -58,6 +58,8 @@ class BinaryTree
             Display(nn.Right);
            
         }
+
+    // this will find the maximum value present in the tree
     public int max()
         {return  max(this.root);
         }
@@ -69,6 +71,8 @@ class BinaryTree
             int rmax = max(nn.Right);
             return  Math.max(nn.val,Math.max(lmax,rmax));
         }
+
+    // this will find the minimum value present int the treee
     public int  min()
     {return  min(this.root);}
     private int min(Node nn)
@@ -79,4 +83,27 @@ class BinaryTree
             int rmin = min(nn.Right);
             return Math.min(nn.val,Math.min(lmin,rmin));
         }
-}   
+
+    // this will find andtell wether a perticlar value exists in  the Binary Tree or not
+
+    public boolean  find(int value)
+        {
+           return find(this.root,value);
+        }
+    private boolean  find(Node nn,int val)
+        {
+            if(nn==null)
+                return  false;
+
+            if (nn.val==val)
+                return true;
+            
+            boolean lfind = find(nn.left, val);
+            boolean rfind = find(nn.Right, val);
+
+            if (lfind ||rfind)
+                return true;
+            return false;
+        }
+
+    }
