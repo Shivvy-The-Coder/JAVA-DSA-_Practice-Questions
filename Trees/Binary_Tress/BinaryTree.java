@@ -1,4 +1,6 @@
-package Trees;
+package Binary_Tress;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 class BinaryTree
@@ -164,10 +166,27 @@ private void inorder(Node nn)
 private void postorder(Node nn)
     {
         if(nn==null)
-         return ;
-        
+         return ;   
          postorder(nn.left);       
          postorder(nn.Right);
          System.out.print(nn.val+" ");
     }
+
+    // we will do level order traversal here
+    public void levelOrder()
+    {
+        System.out.println();
+        Queue <Node> q = new LinkedList<>();
+        q.add(root);
+        while(!q.isEmpty())
+            {
+                Node r =q.remove();
+                System.out.print(r.val+" ");
+                if(r.left!=null)
+                    q.add(r.left);
+                if(r.Right!=null)
+                    q.add(r.Right);
+            }
+    }
+
 }

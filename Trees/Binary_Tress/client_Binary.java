@@ -22,6 +22,7 @@ class client_Binary
         obj.preorder();
         obj.inorder();
         obj.postorder();
+        obj.levelOrder();
         sc.close();
     }
 }
