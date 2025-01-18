@@ -58,7 +58,9 @@ class BinaryTree
             System.out.println(s);
             Display(nn.left);
             Display(nn.Right);
-           
+                
+            String  s1="";
+
         }
 
     // this will find the maximum value present in the tree
