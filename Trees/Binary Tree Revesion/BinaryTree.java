@@ -1,3 +1,4 @@
+import java.util.*;
 public class BinaryTree
 {
     class Node
@@ -10,7 +11,7 @@ public class BinaryTree
     private Node root; 
     Scanner sc = new Scanner (System.in);
 
-    BinaryTree()
+    public BinaryTree()
     {
         root = Creatree();
     }
