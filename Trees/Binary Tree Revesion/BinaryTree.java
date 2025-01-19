@@ -7,5 +7,15 @@ public class BinaryTree
         Node Right ;
     }
 
-    private Node root;
+    private Node root; 
+    Scanner sc = new Scanner (System.in);
+
+    BinaryTree()
+    {
+        root = Creatree();
+    }
+    private Node Creatree()
+    {
+        return null;
+    }
 }
