@@ -1,5 +1,6 @@
 package Linked_List;
-public class Linked_list {
+
+class Linked_list {
     public class Node
     {
         int val;
