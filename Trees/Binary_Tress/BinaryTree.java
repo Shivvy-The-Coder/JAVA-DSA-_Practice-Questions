@@ -59,7 +59,6 @@ class BinaryTree
             Display(nn.left);
             Display(nn.Right);
                 
-            String  s1="";
 
         }
 
