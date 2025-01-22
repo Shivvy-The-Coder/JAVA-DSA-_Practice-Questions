@@ -97,4 +97,47 @@ class LinkedList {
     public int getIndex(int index) {
         return goToIndex(index).val;
     }
+
+    public void removeFirst()
+    {
+        if (size==0)
+            {
+                System.out.println("List is empty");
+                return;
+            }        
+        if(size==1)
+            {
+                Head = null;
+                Tail=null;
+                size=0;
+            }
+        
+        else
+            {
+                Node nn =Head.next;
+                Head.next = null;
+                Head = nn;
+
+            }
+    }
+
+  public void removeLast()
+  {
+    if (size==0)
+    {
+        System.out.println("List is empty");
+        return;
+
+    }
+    if(size==1)
+    {
+        Head = null;
+        Tail=null;
+    }
+    else
+    {
+        Node nn = goToIndex(size-1);
+        nn.next = null;
+    }
+  }
 }

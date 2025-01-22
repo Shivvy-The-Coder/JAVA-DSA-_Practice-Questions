@@ -21,5 +21,8 @@ public class ClientLinkedlist {
         System.out.println(ll.getLast());
         System.out.println(ll.getIndex(3));
 
+        ll.removeFirst();
+        ll.Display();
+
     }
 }
