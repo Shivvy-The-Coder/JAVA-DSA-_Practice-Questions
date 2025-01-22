@@ -17,11 +17,12 @@ class LinkedList {
         if (size == 0) {
             Head = nn;
             Tail = nn;
-            size++;
+
         } else {
             nn.next = Head;
             Head = nn;
         }
+        size++;
 
     }
 
@@ -31,11 +32,12 @@ class LinkedList {
         if (size == 0) {
             Head = nn;
             Tail = nn;
-            size++;
+
         } else {
             Tail.next = nn;
             Tail = nn;
         }
+        size++;
     }
 
     public void Display() {
@@ -57,4 +59,42 @@ class LinkedList {
 
     }
 
+    public Node goToIndex(int index) {
+        int x = 0;
+        Node temp = Head;
+        while (x != index) {
+            temp = temp.next;
+            x++;
+        }
+        return temp;
+    }
+
+    public void addIndex(int index, int value) {
+        if (index == 0) {
+            addFirst(value);
+        } else if (index == size) {
+            addLast(value);
+        } else {
+            Node temp = goToIndex(index - 1);
+
+            Node tempnext = goToIndex(index);
+            Node nn = new Node();
+            nn.val = value;
+            temp.next = nn;
+            nn.next = tempnext;
+        }
+        size++;
+    }
+
+    public int getFirst() {
+        return goToIndex(0).val;
+    }
+
+    public int getLast() {
+        return goToIndex(size - 1).val;
+    }
+
+    public int getIndex(int index) {
+        return goToIndex(index).val;
+    }
 }
