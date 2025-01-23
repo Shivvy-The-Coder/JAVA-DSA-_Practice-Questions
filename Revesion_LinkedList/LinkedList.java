@@ -140,4 +140,19 @@ class LinkedList {
         nn.next = null;
     }
   }
+
+  public void renoveindex(int idx)
+    {
+        if(idx==1)
+            removeFirst();
+        else if (idx==size)
+            removeLast();
+        else
+            {
+                Node before = goToIndex(idx-2);
+                Node atidx  = goToIndex(idx-1);
+                before.next=atidx.next;
+                atidx.next=null;
+            }
+    }
 }

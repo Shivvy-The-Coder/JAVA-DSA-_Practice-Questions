@@ -23,6 +23,8 @@ public class ClientLinkedlist {
 
         ll.removeFirst();
         ll.Display();
-
+        System.out.println();
+        ll.renoveindex(2);
+        ll.Display();
     }
 }
