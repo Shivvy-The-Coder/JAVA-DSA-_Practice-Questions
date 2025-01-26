@@ -1,4 +1,3 @@
-package Leetcode_LinkedList_Questions;
 
 public class Q160Leetcode {
 
@@ -34,22 +33,3 @@ public class Q160Leetcode {
     }
 }
 
-// public class Solution {
-// public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-// ListNode A =headA;
-// ListNode B =headB;
-// while(A!=B)
-// {
-// if(A==null)
-// A=headB;
-// else
-// A=A.next;
-
-// if(B==null)
-// B=headA;
-// else
-// B=B.next;
-// }
-// return B;
-// }
-// }

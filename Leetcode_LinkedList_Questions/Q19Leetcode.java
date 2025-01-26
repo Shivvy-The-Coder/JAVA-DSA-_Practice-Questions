@@ -1,4 +1,3 @@
-package Leetcode_LinkedList_Questions;
 
 public class Q19Leetcode {
 

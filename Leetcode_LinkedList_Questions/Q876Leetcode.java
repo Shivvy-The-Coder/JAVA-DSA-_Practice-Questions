@@ -1,4 +1,3 @@
-package Leetcode_LinkedList_Questions;
 
 class Solution {
     public ListNode middleNode(ListNode head) {

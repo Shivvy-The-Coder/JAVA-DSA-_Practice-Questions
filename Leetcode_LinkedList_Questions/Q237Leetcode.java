@@ -1,4 +1,4 @@
-package Leetcode_LinkedList_Questions;
+
 
 public class Q237Leetcode {
 

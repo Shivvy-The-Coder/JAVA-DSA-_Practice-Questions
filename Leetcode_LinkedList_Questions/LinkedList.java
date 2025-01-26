@@ -1,4 +1,3 @@
-package Leetcode_LinkedList_Questions;
 
 class LinkedList {
     public class Node {
@@ -98,61 +97,50 @@ class LinkedList {
         return goToIndex(index).val;
     }
 
-    public void removeFirst()
-    {
-        if (size==0)
-            {
-                System.out.println("List is empty");
-                return;
-            }        
-        if(size==1)
-            {
-                Head = null;
-                Tail=null;
-                size=0;
-            }
-        
-        else
-            {
-                Node nn =Head.next;
-                Head.next = null;
-                Head = nn;
+    public void removeFirst() {
+        if (size == 0) {
+            System.out.println("List is empty");
+            return;
+        }
+        if (size == 1) {
+            Head = null;
+            Tail = null;
+            size = 0;
+        }
 
-            }
+        else {
+            Node nn = Head.next;
+            Head.next = null;
+            Head = nn;
+
+        }
     }
 
-  public void removeLast()
-  {
-    if (size==0)
-    {
-        System.out.println("List is empty");
-        return;
+    public void removeLast() {
+        if (size == 0) {
+            System.out.println("List is empty");
+            return;
 
+        }
+        if (size == 1) {
+            Head = null;
+            Tail = null;
+        } else {
+            Node nn = goToIndex(size - 1);
+            nn.next = null;
+        }
     }
-    if(size==1)
-    {
-        Head = null;
-        Tail=null;
-    }
-    else
-    {
-        Node nn = goToIndex(size-1);
-        nn.next = null;
-    }
-  }
 
-  public void renoveindex(int idx)
-    {
-        if(idx==1)
+    public void renoveindex(int idx) {
+        if (idx == 1)
             removeFirst();
-        else if (idx==size)
+        else if (idx == size)
             removeLast();
-        else
-            {
-                Node before = goToIndex(idx-2);
-                Node atidx  = goToIndex(idx-1);
-                before.next=atidx.next;
-                atidx.next=null;
-            }
+        else {
+            Node before = goToIndex(idx - 2);
+            Node atidx = goToIndex(idx - 1);
+            before.next = atidx.next;
+            atidx.next = null;
+        }
     }
 }

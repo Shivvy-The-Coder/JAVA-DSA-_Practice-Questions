@@ -1,4 +1,4 @@
-  package Leetcode_LinkedList_Questions;
+
   class ListNode
  {
    int val;
