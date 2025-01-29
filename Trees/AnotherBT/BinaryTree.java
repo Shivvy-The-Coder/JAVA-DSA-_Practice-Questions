@@ -53,6 +53,35 @@ public class BinaryTree {
                 
         }
 
+    public void ReturnGreatest()
+        {
+            System.out.println(ReturnGreatest(this.root));
+        }
+    private int ReturnGreatest(Node root)
+        {
+            if(root==null)
+                return Integer.MIN_VALUE;
+            
+            int leftMax= ReturnGreatest(root.left);
+            int righttMax= ReturnGreatest(root.right);
+            return Math.max(root.data,Math.max(leftMax,righttMax));
+        }
+
+        
+        private int ReturnSmallest(Node root) {
+            if (root == null)
+                return Integer.MAX_VALUE;
+
+            int leftMax = ReturnSmallest(root.left);
+            int righttMax = ReturnSmallest(root.right);
+
+            return Math.min(root.data, Math.min(leftMax, righttMax));
+        }
+        
+        public void ReturnSmallest() {
+            System.out.println(ReturnSmallest(this.root));
+        }
+
     public Node createTree()
     {
         Node nn = new Node();
@@ -75,4 +104,37 @@ public class BinaryTree {
         return nn;
     }
 
-}
+
+    public boolean find(int item)
+        {
+            return find(root ,item);
+        }
+    private boolean find(Node root, int item)
+        {
+            if(root ==null)
+                return false;
+            
+            if(root.data==item)
+                return true;
+           boolean l=find(root.left,item);
+           boolean r=find(root.right,item);
+
+           return l||r;
+
+        }
+
+    public void height() 
+        {
+            System.out.println(height(root,0));
+        }
+    private int height (Node root,int c)
+        {
+            if (root==null)
+                {
+                    return ;
+                }
+            int  Leftheight=height(root, c+1);
+            int  rihtheight=height(root, c+1);
+            return Math.max(Leftheight, rihtheight)+1;
+        }
+    }
