@@ -10,6 +10,9 @@ public class Client_binary
         System.out.println(bt.find(40));
         System.out.println(bt.find(90));
         bt.height();
+        bt.PreOrder();
+        bt.PostOrder();
+        bt.InOrder();
     }    
 }
 
