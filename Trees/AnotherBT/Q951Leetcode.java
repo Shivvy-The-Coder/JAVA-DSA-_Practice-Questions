@@ -12,7 +12,7 @@ package AnotherBT;
   }
   }
 
-  public class Qno951Leetcode {
+  public class Q951Leetcode {
     public boolean flipEquiv(TreeNode root1, TreeNode root2) {
 
         if (root1 == null && root2 == null)
