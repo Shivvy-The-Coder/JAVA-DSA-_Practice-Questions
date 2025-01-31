@@ -10,9 +10,23 @@ public class Client_binary
         System.out.println(bt.find(40));
         System.out.println(bt.find(90));
         bt.height();
+
+        System.out.print(" Preorder   ->");
         bt.PreOrder();
+        System.out.println();
+        
+        System.out.print(" Inorder    ->");
         bt.PostOrder();
+        System.out.println();
+        
+        System.out.print(" PostOrder  ->");
         bt.InOrder();
+        System.out.println();
+
+        System.out.print(" LevelOrder ->");
+        bt.LevelOrder();        
+        System.out.println();
+        
     }    
 }
 

@@ -162,23 +162,77 @@ public class BinaryTree {
 
     }
 
-    public void LevelOrder() {
-        LevelOrder(root);
-    }
-    private void LevelOrder(Node nn) 
-    {
-        Queue <Node> q = new LinkedList<>();
-        q.add(nn);
-        while(!q.isEmpty())
-            {
-                Node n = q.remove();
-                System.out.println(n.data+" ");
 
-                if(n.left!=null)
-                    q.add(n.left);
-                if(n.right!=null)
-                    q.add(n.left);
+    public void LevelOrder()
+        {
+            LevelOrder(root);
+        }
+    private void LevelOrder(Node root)
+        {
+            Queue <Node> q = new LinkedList<>();
+            q.add(root);
+            while(!q.isEmpty())
+                {
+                    int nodecount = q.size();
+
+                    for (int  i=0;i<nodecount;i++)
+                        {
+                            Node nd = q.remove();
+
+                            if (i==nodecount-1)
+                                System.out.print(nd.data+" ");
+
+                            if(nd.left!=null)
+                                q.add(nd.left);
+                            if(nd.right!=null)
+                                q.add(nd.right);
+                        }
+                }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // public void LevelOrder() {
+    //     LevelOrder(root);
+    // }
+    // private void LevelOrder(Node nn) 
+    // {
+    //     Queue <Node> q = new LinkedList<>();
+    //     q.add(nn);
+    //     while(!q.isEmpty())
+    //         {
+    //             Node n = q.remove();
+    //             System.out.println(n.data+" ");
+
+    //             if(n.left!=null)
+    //                 q.add(n.left);
+    //             if(n.right!=null)
+    //                 q.add(n.left);
                     
-            }
-    }
+    //         }
+    // }
 }
