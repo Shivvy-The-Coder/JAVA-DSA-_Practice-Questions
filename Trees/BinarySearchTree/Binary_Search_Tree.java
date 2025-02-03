@@ -17,7 +17,38 @@ public class Binary_Search_Tree {
         }
     private Node CreateTree(int[] in, int si, int ei)
     {
-        
-        return null;
+        if(si>ei)
+            return null;
+
+        int mid =(si+ei)/2;
+        Node nn =new Node();
+        nn.val=in[mid];
+
+        nn.left=CreateTree(in, si, mid-1);
+        nn.right=CreateTree(in, mid+1, ei);
+        return nn;
     }
+
+    public void Display()
+        {
+            Display(root);
+        }
+    private void Display(Node nn)
+        {
+            if (nn==null)
+                return;
+            String s = " <- "+nn.val+" -> ";
+            if(nn.left!=null)
+                s=nn.left.val+s;
+            else
+                s="null"+s;
+            if(nn.right!=null)
+                s+=nn.right.val;
+            else
+                s=s+"null";
+
+            System.out.println(s);
+            Display(nn.left);
+            Display(nn.right);
+        }   
 }
