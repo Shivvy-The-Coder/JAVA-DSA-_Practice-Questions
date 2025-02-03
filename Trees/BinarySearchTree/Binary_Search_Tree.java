@@ -20,7 +20,9 @@ public class Binary_Search_Tree {
         if(si>ei)
             return null;
 
-        int mid =(si+ei)/2;
+        int mid =(si+ei);
+        // below will create the node where the data is needed to be stored
+        
         Node nn =new Node();
         nn.val=in[mid];
 
