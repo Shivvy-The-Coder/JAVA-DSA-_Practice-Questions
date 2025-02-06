@@ -7,6 +7,7 @@ public class ReverseStack {
 
     public static void main(String[] args) 
     {
+        // below we are creating the stack object.
         Stack <Integer> st = new Stack<>();
         st.push(2);
         st.push(1);
