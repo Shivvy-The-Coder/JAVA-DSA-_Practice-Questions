@@ -10,6 +10,7 @@ public class Dynamic_Queue extends Queue_Example
                     int newarr[]= new int[2*arr.length];
                     for(int i=0;i<size;i++)
                         {
+                            //edited
                             int idx = (front +i)%arr.length;
                             newarr[i]=arr[idx];                       
                          }
