@@ -128,7 +128,59 @@ public class BinaryTree
             return Math.max(Leftheight,rightheight)+1;
         }
 
+    public void Preorder()
+        {
+            System.out.println("PreOrder Traversal is ");
+            Preorder(root);
+            System.out.print("NULL");
+        }
+    public Node Preorder(Node nn)
+        {
+            if(nn==null)
+                return null;
+            
+            System.out.print(nn.data+"->");
+            Preorder(nn.left);
+            Preorder(nn.right);
+        
+            return nn;
+        }
+    public void InOrder()
+    {
+        System.out.println("\n InOrder Traversal is ");
+        InOrder(root);
+        System.out.print("NULL");
     }
 
-    
-    // 10 true 5 true 3 false false true 7 false false true 15 true 12 false false true 18 false false
+    public Node InOrder(Node nn)
+    {
+        if(root==null)
+            return null;     
+        if(nn.left!=null)  
+        InOrder(nn.left);
+        System.out.print(nn.data+"->");
+        if(nn.right!=null)  
+        InOrder(nn.right);
+        return nn;
+    }
+
+    public void PostOrder()
+        {
+            System.out.println("\n PostOrder Traversal is ");
+            PostOrder(root);
+            System.out.print("NULL");
+        }
+
+    public Node PostOrder(Node nn)
+    {
+        if(nn==null)
+            return null;
+        
+        PostOrder(nn.left);
+        PostOrder(nn.right);
+        System.out.print(nn.data+" ->");
+        return nn;
+    }
+
+}
+// 10 true 5 true 3 false false true 7 false false true 15 true 12 false false true 18 false false

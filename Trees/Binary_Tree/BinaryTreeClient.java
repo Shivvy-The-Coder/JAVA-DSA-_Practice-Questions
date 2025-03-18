@@ -1,7 +1,4 @@
 package Binary_Tree;
-
-import java.util.Scanner;
-
 public class BinaryTreeClient
 {
     public static void main(String[] args) 
@@ -13,5 +10,8 @@ public class BinaryTreeClient
         bt.ReturnSmallest();
         bt.Find(90);
         bt.height();
+        bt.Preorder();
+        bt.InOrder();
+        bt.PostOrder();
     }
 }
