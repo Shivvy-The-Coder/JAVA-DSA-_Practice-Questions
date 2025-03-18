@@ -1,4 +1,6 @@
 package Binary_Tree;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 public class BinaryTree
 {
@@ -181,6 +183,29 @@ public class BinaryTree
         System.out.print(nn.data+" ->");
         return nn;
     }
+
+    public void LevelOrder()
+        {
+            System.out.println("\n LEVEL ORDER TRAVERSAL");
+            LevelOrder(root);
+            System.out.print("NULL");
+        }
+    public void LevelOrder(Node nn)
+        {
+            Queue <Node> q = new LinkedList<>();
+            q.add(root);
+            while(!q.isEmpty())
+                {
+                    Node n = q.remove();
+                    System.out.print(n.data+"->");
+                    if(n.left!=null)
+                        q.add(n.left);
+                    if(n.right!=null)
+                        q.add(n.right);
+                }
+            
+
+        }
 
 }
 // 10 true 5 true 3 false false true 7 false false true 15 true 12 false false true 18 false false
