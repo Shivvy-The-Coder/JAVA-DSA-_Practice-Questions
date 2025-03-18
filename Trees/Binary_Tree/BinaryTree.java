@@ -16,7 +16,8 @@ public class BinaryTree
         {
             root=CreateBinaryTree();
         }
-    public Node CreateBinaryTree()
+  
+        public Node CreateBinaryTree()
         {
             Node nn = new Node();
             int data = sc.nextInt();
@@ -42,7 +43,8 @@ public class BinaryTree
         {
             Display(root);
         }
-        private void Display(Node root)
+        
+    private void Display(Node root)
         {
             if(root.left==null && root.right==null)
                 {
@@ -63,4 +65,70 @@ public class BinaryTree
             Display(root.right);
         }
 
-}
+    public int ReturnGreatest(Node root)
+        {
+            if(root.left==null && root.right==null)
+                return root.data;
+            int leftmax = ReturnGreatest(root.left);
+            int rightmax = ReturnGreatest(root.right);
+            
+            return Math.max(root.data,Math.max(leftmax,rightmax));
+        }
+
+    public void ReturnGreatest()
+        {
+            System.out.println(ReturnGreatest(root));
+        }
+    public int ReturnSmallest(Node root)
+        {
+            if(root.left==null && root.right==null)
+                return root.data;
+            int leftmax = ReturnSmallest(root.left);
+            int rightmax = ReturnSmallest(root.right);
+            
+            return Math.min(root.data,Math.min(leftmax,rightmax));
+        }
+
+    public void ReturnSmallest()
+        {
+            System.out.println(ReturnSmallest(root));
+        }
+
+    public void Find(int value)
+        {
+            System.out.println(Find(root,value));
+        }
+
+        public boolean Find(Node root , int value)
+        {
+            if(root==null)
+                return false;
+            
+                if(root.data==value)
+                return true;
+            boolean checkLeft  = Find(root.left,value);
+            boolean checkRight = Find(root.right,value);
+
+            return checkLeft||checkRight;
+        }
+    
+    public void height()
+        {
+            System.out.println(height(root));
+        }
+
+    public int height(Node root)
+        {
+            if(root==null)
+                return -1;
+            
+            int Leftheight= height(root.left);
+            int rightheight= height(root.right);
+
+            return Math.max(Leftheight,rightheight)+1;
+        }
+
+    }
+
+    
+    // 10 true 5 true 3 false false true 7 false false true 15 true 12 false false true 18 false false
