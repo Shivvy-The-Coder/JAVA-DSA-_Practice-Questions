@@ -14,5 +14,8 @@ public class BinaryTreeClient
         bt.InOrder();
         bt.PostOrder();
         bt.LevelOrder();
+        bt.RightView();
+        bt.LeftView();
+        bt.LeftestNode_fromroot();
     }
 }

@@ -12,7 +12,7 @@ public class BinaryTree
     }
     private Node root;
     Scanner sc = new Scanner(System.in);
-
+    int leftmax,rightmax;
 
     public BinaryTree()
         {
@@ -48,7 +48,7 @@ public class BinaryTree
         
     private void Display(Node root)
         {
-            if(root.left==null && root.right==null)
+            if(root==null)
                 {
                     return;}
             String str ="<-"+root.data+"->";
@@ -69,10 +69,10 @@ public class BinaryTree
 
     public int ReturnGreatest(Node root)
         {
-            if(root.left==null && root.right==null)
-                return root.data;
-            int leftmax = ReturnGreatest(root.left);
-            int rightmax = ReturnGreatest(root.right);
+            if(root==null)
+                return Integer.MIN_VALUE;
+                leftmax = ReturnGreatest(root.left);
+                rightmax = ReturnGreatest(root.right);
             
             return Math.max(root.data,Math.max(leftmax,rightmax));
         }
@@ -83,8 +83,8 @@ public class BinaryTree
         }
     public int ReturnSmallest(Node root)
         {
-            if(root.left==null && root.right==null)
-                return root.data;
+            if(root==null)
+                return Integer.MAX_VALUE;
             int leftmax = ReturnSmallest(root.left);
             int rightmax = ReturnSmallest(root.right);
             
@@ -207,5 +207,112 @@ public class BinaryTree
 
         }
 
-}
+
+    public void RightView()
+        {
+            System.out.println("\n Right View of B Tree is");
+            RightView(root);
+            
+        }
+    public void RightView(Node nn)
+        {
+            Queue <Node> q = new LinkedList<>();
+            q.add(nn);
+
+            while(!q.isEmpty())
+                {
+                    int n =q.size();
+                    Node temp =null;
+                    for (int i=0;i<n;i++)
+                    {
+                        temp=q.remove();
+                        if(i==n-1)
+                            {
+                                System.out.print(temp.data+" ");
+                            }
+                        if(temp.left!=null)
+                            q.add(temp.left);
+                        if(temp.right!=null)
+                            q.add(temp.right);
+                    }
+                  
+                }
+        }
+    public void LeftView()
+        {
+            System.out.println("\n Left View of B Tree is");
+            LeftView(root);
+            
+        }
+    public void LeftView(Node nn)
+        {
+            Queue <Node> q = new LinkedList<>();
+            q.add(nn);
+
+            while(!q.isEmpty())
+                {
+                    int n =q.size();
+                    Node temp =null;
+                    for (int i=0;i<n;i++)
+                    {
+                        temp=q.remove();
+                        if(i==0)
+                            {
+                                System.out.print(temp.data+" ");
+                            }
+                        if(temp.left!=null)
+                            q.add(temp.left);
+                        if(temp.right!=null)
+                            q.add(temp.right);
+                    }
+                  
+                }
+        }
+
+    public void LeftestNode_fromroot()
+        {
+            System.out.println("\n leftmost Node is "+LeftestNode_fromroot(root));
+        }
+    public int LeftestNode_fromroot(Node nn)
+        {
+            if(root==null)
+                return 0;
+            
+            Queue <Node>q = new LinkedList<>();
+            Queue <Node>Leftq = new LinkedList<>();
+            q.add(nn);
+            int leftans=0;
+            while(!q.isEmpty())
+                {
+                    Node n = null;
+                    int len = q.size();
+                    for (int i=0;i<len;i++)
+                    {
+                    n=q.remove();
+                    if(n.left!=null)
+                        {
+                            q.add(n.left);
+                            Leftq.add(n.left);
+                        }
+                    if(n.right!=null)
+                        {
+                            q.add(n.right);
+                        }
+                    int x=Leftq.size();
+                    for(int k=0;k<x;k++)
+                        {
+                            System.out.println(Leftq.peek());
+                            if(k==0)
+                                leftans=Leftq.remove().data;
+                            else
+                                Leftq.remove();
+                        }
+                }
+                }
+                // System.out.println(fnas)
+                return leftans;
+            
+        }
+
+    }
 // 10 true 5 true 3 false false true 7 false false true 15 true 12 false false true 18 false false
