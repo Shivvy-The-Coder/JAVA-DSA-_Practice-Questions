@@ -275,42 +275,34 @@ public class BinaryTree
         }
     public int LeftestNode_fromroot(Node nn)
         {
-            if(root==null)
-                return 0;
+            if(nn==null)
+                return -1;
             
             Queue <Node>q = new LinkedList<>();
-            Queue <Node>Leftq = new LinkedList<>();
             q.add(nn);
-            int leftans=0;
             while(!q.isEmpty())
                 {
-                    Node n = null;
+                    
+                    Node n = q.peek();
                     int len = q.size();
+                    for (int i=0;i<len;i++)
+                        System.out.print(n);
                     for (int i=0;i<len;i++)
                     {
                     n=q.remove();
-                    if(n.left!=null)
-                        {
-                            q.add(n.left);
-                            Leftq.add(n.left);
-                        }
                     if(n.right!=null)
                         {
                             q.add(n.right);
                         }
-                    int x=Leftq.size();
-                    for(int k=0;k<x;k++)
-                        {
-                            System.out.println(Leftq.peek());
-                            if(k==0)
-                                leftans=Leftq.remove().data;
-                            else
-                                Leftq.remove();
+                    if(n.left!=null)
+                        {   q.add(n.left);                         
                         }
+                    
+                        
+                    }
+                    return n.data;
                 }
-                }
-                // System.out.println(fnas)
-                return leftans;
+                return -1;
             
         }
 

@@ -17,7 +17,7 @@ class jump_game {
                 {                               
                     if (jump(nums , idx+i))
                         return true;
-
+// just for record
                 }
             return false;
         }
