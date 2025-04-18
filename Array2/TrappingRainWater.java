@@ -5,6 +5,6 @@ public class TrappingRainWater {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextLine();
         int arr[] = new int[n];
-
+        System.out.println("Hello World");
     }
 }
